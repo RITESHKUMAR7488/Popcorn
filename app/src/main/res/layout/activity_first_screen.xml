@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#242A32"
+        tools:context=".uis.FirstScreen">
+
+        <Button
+            android:id="@+id/btn_Login"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginTop="220dp"
+            android:background="@drawable/gradient1"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingHorizontal="30dp"
+            android:text="Login"
+            app:cornerRadius="55dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_SignUp"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="64dp"
+            android:backgroundTint="#242A32"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Sign up"
+            app:layout_constraintEnd_toEndOf="@+id/btn_Login"
+            app:layout_constraintStart_toStartOf="@+id/btn_Login"
+            app:layout_constraintTop_toBottomOf="@+id/btn_Login"
+            app:strokeColor="#FAF6F6"
+            app:strokeWidth="2dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

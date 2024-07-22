@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#242A32"
+        tools:context=".uis.fragments.Shows">
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout"
+            android:layout_width="match_parent"
+            android:elevation="10dp"
+            app:shimmer_shape="radial"
+            app:shimmer_repeat_mode="restart"
+            tools:shimmer="@xml/layout_shimmer_home"
+            android:layout_height="match_parent">
+            <include layout="@layout/layout_shimmer_shows"/>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:background="#242A32"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#242A32"
+                android:paddingHorizontal="30dp"
+                android:layout_marginTop="30dp"
+                android:padding="10dp"
+                android:text="Shows"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/child_rv_model">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+</layout>
